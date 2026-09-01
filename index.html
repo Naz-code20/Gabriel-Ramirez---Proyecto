@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto CT Gabriel Ramírez</title>
+    <title>Proyecto CT Gabriel Ramírez - Modelo de Juego</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        .subtab-content { display: none; }
+        .subtab-content.active { display: block; }
     </style>
 </head>
 <body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Navegación Superior Fija -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-md border-b border-gray-800 z-50 px-6 py-4">
+    <nav class="fixed top-0 left-0 w-full bg-gray-900/95 backdrop-blur-md border-b border-gray-800 z-50 px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <a href="#" class="text-xl font-black tracking-wider text-blue-500 uppercase">CT Gabriel Ramírez</a>
             <div class="flex flex-wrap gap-2 sm:gap-3 justify-center">
-                <a href="#modelo-juego" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Modelo de Juego</a>
+                <a href="#modelo-juego" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition text-xs sm:text-sm">Modelo de Juego</a>
                 <a href="#sesion" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Sesión</a>
                 <a href="#principio-metodologico" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Principio Metodológico</a>
                 <a href="#analisis" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Análisis</a>
@@ -33,25 +35,25 @@
             <!-- Texto Principal -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                 <span class="text-blue-500 font-semibold tracking-widest uppercase text-xs sm:text-sm bg-blue-950/60 border border-blue-800/50 px-3 py-1 rounded-full inline-block">
-                    Propuesta Integral de Rendimiento Táctico
+                    Marco Metodológico de Alto Rendimiento
                 </span>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
                     Proyecto CT Gabriel Ramírez
                 </h1>
                 <p class="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">
-                    Estructura metodológica, modelo de juego, planificación de sesiones y análisis de rendimiento orientados a potenciar los activos del club con datos y trabajo de campo.
+                    Diseño estratégico para la construcción de equipo. Principios, subprincipios y comportamientos para instaurar una identidad táctica reconocible y competitiva.
                 </p>
                 <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
                     <a href="#modelo-juego" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg shadow-blue-600/30 transition">
-                        Explorar Metodología
+                        Ver Modelo de Juego
                     </a>
                 </div>
             </div>
 
-            <!-- Foto de Portada (Carga tu imagen subida: AOA_9648.jpg) -->
+            <!-- Foto de Portada -->
             <div class="lg:col-span-5 flex justify-center">
                 <div class="relative w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
-                    <img src="AOA_9648.jpg" alt="Gabriel Ramírez Trabajo Táctico" class="w-full h-full object-cover object-top">
+                    <img src="AOA_9648.jpg.JPG" alt="Gabriel Ramírez Trabajo Táctico" class="w-full h-full object-cover object-top">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-40"></div>
                 </div>
             </div>
@@ -60,48 +62,315 @@
     </header>
 
     <!-- Contenido Principal -->
-    <main class="max-w-7xl mx-auto px-6 space-y-20 pb-24">
+    <main class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
 
-        <!-- 1. MODELO DE JUEGO -->
-        <section id="modelo-juego" class="pt-16">
-            <div class="flex items-center gap-3 mb-8">
-                <span class="text-blue-500 text-2xl font-bold">01.</span>
-                <h2 class="text-3xl font-black text-white uppercase tracking-wide">Modelo de Juego</h2>
+        <!-- 1. MODELO DE JUEGO (COMPLETO DEL PDF) -->
+        <section id="modelo-juego" class="pt-16 space-y-12">
+            
+            <!-- Título de Sección -->
+            <div class="border-b border-gray-800 pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-blue-500 text-2xl font-bold">01.</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-wide">Modelo de Juego</h2>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">Estructura conceptual y principios tácticos del cuerpo técnico.</p>
             </div>
 
-            <!-- Navegación por pestañas del Modelo de Juego -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-xl">
-                <div class="flex flex-wrap gap-2 border-b border-gray-800 pb-4 mb-6">
-                    <button onclick="switchTab('ofensiva')" id="btn-ofensiva" class="tab-btn px-4 py-2 bg-blue-600 text-white font-bold rounded-lg transition text-sm">Fase Ofensiva</button>
-                    <button onclick="switchTab('defensiva')" id="btn-defensiva" class="tab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg transition text-sm">Fase Defensiva</button>
-                    <button onclick="switchTab('transicion-of')" id="btn-transicion-of" class="tab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg transition text-sm">Transición Off-Def</button>
-                    <button onclick="switchTab('transicion-def')" id="btn-transicion-def" class="tab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg transition text-sm">Transición Def-Off</button>
-                </div>
+            <!-- Marco Conceptual Base -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                <h3 class="text-xl font-bold text-blue-400 uppercase tracking-wider">Marco Conceptual</h3>
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                    <strong>¿Qué es nuestro Modelo de Juego?</strong> Es el conjunto de principios, subprincipios y comportamientos colectivos e individuales que definen una forma de jugar reconocible y repetible, independientemente de quién esté sobre el terreno de juego.
+                </p>
 
-                <!-- Pestaña 1: Ofensiva -->
-                <div id="tab-ofensiva" class="tab-content active space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Ataque Organizado y Progresión</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Generación de superioridades posicionales desde la fase de iniciación. Ocupación racional de espacios para fijar rivales e invadir pasillos internos.</p>
-                </div>
-
-                <!-- Pestaña 2: Defensiva -->
-                <div id="tab-defensiva" class="tab-content space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Organización Defensiva en Bloque</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Bloque compacto con distancias interlineales reducidas. Gatillos de presión definidos para orientar el ataque rival hacia zonas de recuperación.</p>
-                </div>
-
-                <!-- Pestaña 3: Transición Off-Def -->
-                <div id="tab-transicion-of" class="tab-content space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Presión Tras Pérdida</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Reorganización defensiva e inhibición del primer pase de salida del rival para evitar transiciones rápidas.</p>
-                </div>
-
-                <!-- Pestaña 4: Transición Def-Off -->
-                <div id="tab-transicion-def" class="tab-content space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Ataque Rápido y Contraataque</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Pase de seguridad de salida y despliegue sobre los espacios desorganizados del rival.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4">
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800">
+                        <span class="text-blue-500 font-bold block text-sm mb-1">Estructura Base</span>
+                        <p class="text-xs text-gray-400">4 momentos del juego + Balón Parado (ABP).</p>
+                    </div>
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800">
+                        <span class="text-blue-500 font-bold block text-sm mb-1">Filtro de Selección</span>
+                        <p class="text-xs text-gray-400">Antes de preguntar "¿es bueno?", nos preguntamos "¿es bueno para lo que el equipo necesita?".</p>
+                    </div>
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800">
+                        <span class="text-blue-500 font-bold block text-sm mb-1">Criterio de Entrenamiento</span>
+                        <p class="text-xs text-gray-400">Cada tarea semanal entrena un principio del modelo, no acciones aisladas.</p>
+                    </div>
+                    <div class="bg-gray-950 p-4 rounded-xl border border-gray-800">
+                        <span class="text-blue-500 font-bold block text-sm mb-1">Lenguaje Común</span>
+                        <p class="text-xs text-gray-400">Cuerpo técnico, plantilla y cantera hablan el mismo código táctico.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- PASO 1: Filosofía e Idea de Juego -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                <span class="text-xs font-bold text-blue-500 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Paso 1 · Filosofía</span>
+                <h3 class="text-2xl font-black text-white">Idea de Juego</h3>
+                <blockquote class="text-lg sm:text-xl font-medium italic text-blue-300 border-l-4 border-blue-600 pl-4 py-1">
+                    "Posesión con intención, profundidad cuando encontramos la ventaja, potenciando el talento individual al servicio del colectivo."
+                </blockquote>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                    <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-2">
+                        <h4 class="text-blue-400 font-bold text-sm">Principio Dominante</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">Posesión orientada a generar la opción de finalizar; transición ofensiva priorizando la profundidad; presión para limitar líneas de pase del rival; transición defensiva ligada a la posesión para recuperar rápido; verticalidad inmediata ante ventaja espacial.</p>
+                    </div>
+                    <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-2">
+                        <h4 class="text-blue-400 font-bold text-sm">Renuncia Estratégica</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">El equipo renuncia al juego especulativo, priorizando ser un bloque proactivo tanto con balón como sin él.</p>
+                    </div>
+                    <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-2">
+                        <h4 class="text-blue-400 font-bold text-sm">Emoción Colectiva</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">Transmitir respeto por el espectáculo y los valores del fútbol, buscando constantemente un juego ofensivo y de propuesta vertical.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASO 2: División del Terreno de Juego -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                <span class="text-xs font-bold text-blue-500 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Paso 2 · Zonificación Táctica</span>
+                <h3 class="text-2xl font-black text-white">División del Campo</h3>
+                <p class="text-gray-400 text-sm">Estructuración del terreno de juego en zonas longitudinales y canales horizontales para la orientación espacial de los jugadores.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+                    <!-- Zonas Longitudinales -->
+                    <div class="space-y-3">
+                        <h4 class="text-white font-bold text-sm uppercase tracking-wider text-blue-400">Zonas Longitudinales (Profundidad)</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-white">Zona A</span>
+                                <span class="text-gray-400">Iniciación propia / Salida de balón</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-white">Zona B</span>
+                                <span class="text-gray-400">Construcción ygestión en campo propio</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-white">Zona C</span>
+                                <span class="text-gray-400">Creación y progresión en campo rival</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-white">Zona D</span>
+                                <span class="text-gray-400">Finalización e invasión de área</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canales Horizontales -->
+                    <div class="space-y-3">
+                        <h4 class="text-white font-bold text-sm uppercase tracking-wider text-blue-400">Canales Horizontales (Amplitud)</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-blue-400">LWC (Left Wide Channel)</span>
+                                <span class="text-gray-400">Banda Izquierda</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-blue-400">LHS (Left Half-Space)</span>
+                                <span class="text-gray-400">Pasillo Interior Izquierdo</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-blue-400">CC (Central Channel)</span>
+                                <span class="text-gray-400">Carril Central</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-blue-400">RHS (Right Half-Space)</span>
+                                <span class="text-gray-400">Pasillo Interior Derecho</span>
+                            </div>
+                            <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
+                                <span class="font-bold text-blue-400">RWC (Right Wide Channel)</span>
+                                <span class="text-gray-400">Banda Derecha</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASO 3 y 4: Matriz de Momentos del Juego -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-8">
+                <div>
+                    <span class="text-xs font-bold text-blue-500 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Pasos 3 y 4 · Principios por Momento</span>
+                    <h3 class="text-2xl font-black text-white mt-3">Comportamientos Tácticos Detallados</h3>
+                </div>
+
+                <!-- Botones Sub-pestañas -->
+                <div class="flex flex-wrap gap-2 border-b border-gray-800 pb-4">
+                    <button onclick="switchSubTab('ataque')" id="btn-sub-ataque" class="subtab-btn px-4 py-2 bg-blue-600 text-white font-bold rounded-lg text-xs sm:text-sm">1. Ataque Posicional</button>
+                    <button onclick="switchSubTab('defensa')" id="btn-sub-defensa" class="subtab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg text-xs sm:text-sm">2. Presión Defensiva</button>
+                    <button onclick="switchSubTab('transiciones')" id="btn-sub-transiciones" class="subtab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg text-xs sm:text-sm">3. Transiciones (Of / Def)</button>
+                    <button onclick="switchSubTab('abp')" id="btn-sub-abp" class="subtab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg text-xs sm:text-sm">4. Balón Parado (ABP)</button>
+                </div>
+
+                <!-- SUB-TAB 1: ATAQUE POSICIONAL -->
+                <div id="subtab-ataque" class="subtab-content active space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Posicionamiento y Posesión -->
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">1. Posicionamiento y Amplitud</h4>
+                            <p class="text-xs text-gray-400">Promover la posesión eficiente mediante una organización óptima del bloque en el campo.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Ocupación de fijadores por delante del bloque rival.</li>
+                                <li>Jugadores abiertos en bandas (lado balón y lado lejano).</li>
+                                <li>Ocupación de espacios interiores (2, 3 o +4 jugadores en pasillos internos).</li>
+                                <li>Intercambios posicionales y escalonamiento a diferentes alturas.</li>
+                                <li>Posicionamiento intermedio para vigilancia y prevención de pérdidas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">2. Posesión con Intención</h4>
+                            <p class="text-xs text-gray-400">Gestionar el balón identificando el momento ideal para batir líneas rivales.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Juego alrededor, por dentro y a la espalda de la línea defensiva.</li>
+                                <li>Uso del 3er y 4to hombre, pases de pared y reciclo de posesión.</li>
+                                <li>Conducciones fijadoras para liberar compañeros libres.</li>
+                                <li>Manejo del tempo de juego, paciencia y pases con propósito.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Progresión y Finalización -->
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">3. Progresión Táctica</h4>
+                            <p class="text-xs text-gray-400">Avanzar superando líneas enemigas para generar situaciones de gol.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Generación de superioridad numérica, posicional y cualitativa.</li>
+                                <li>Desmarques de apoyo (contrapie/orientado) y rupturas al espacio.</li>
+                                <li>Recepción entre líneas y ataque de canales de progresión.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">4. Dinámicas de Finalización</h4>
+                            <p class="text-xs text-gray-400">Ocupación racional del área y vías de remate.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Ocupación de las 3 zonas de llegada desde centros/pases atrás.</li>
+                                <li>Movimientos para ganar la anticipación al central rival.</li>
+                                <li>Remates cruzados al segundo palo e intercambios de apoyo/ruptura.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SUB-TAB 2: PRESIÓN DEFENSIVA -->
+                <div id="subtab-defensa" class="subtab-content space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">1. Organización y Posicionamiento</h4>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Acoso coordinado por 1ª, 2ª y última línea de presión.</li>
+                                <li>Marcaje zonal con salto en salto tras pase atrás o recepción de espaldas.</li>
+                                <li>Corte activo de líneas de pase y mantenimiento de la profundidad defensiva.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">2. Recuperación del Balón</h4>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Presión sofocante sobre el poseedor del balón.</li>
+                                <li>Temporización y reducción de espacios en amplitud y profundidad.</li>
+                                <li>Repliegue y persecuciones estructuradas ante envíos largos.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">3. Evitar la Progresión</h4>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Contrarrestar superioridades numéricas y cualitativas del rival.</li>
+                                <li>Ayudas permanentes y coberturas hacia zonas adyacentes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">4. Protección del Área</h4>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li>Marcajes individuales estrictos dentro del área ante centros.</li>
+                                <li>Bloqueo activo de tiros lejanos y despejes orientados.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SUB-TAB 3: TRANSICIONES -->
+                <div id="subtab-transiciones" class="subtab-content space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Transición Ofensiva -->
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-green-400 font-bold text-base border-b border-gray-800 pb-2">Transición Defensa-Ataque (Al recuperar)</h4>
+                            <p class="text-xs text-gray-400">Aprovechar el desorden rival tras la recuperación del balón.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li><strong>Asegurar Posesión:</strong> Pase de seguridad fuera de la zona de densidad de pérdida.</li>
+                                <li><strong>Progresión Rápida:</strong> Despliegue inmediato en ruptura hacia espacios desorganizados.</li>
+                                <li><strong>Uso del 4to Hombre:</strong> Apoyos por detrás de la línea del balón para acelerar.</li>
+                                <li><strong>Finalización Veloz:</strong> Buscar el tiro o llegada al área en pocos segundos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Transición Defensiva -->
+                        <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                            <h4 class="text-red-400 font-bold text-base border-b border-gray-800 pb-2">Transición Ataque-Defensa (Al perder)</h4>
+                            <p class="text-xs text-gray-400">Evitar que el rival progrese o nos tome desorganizados.</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
+                                <li><strong>Presión Tras Pérdida:</strong> Acoso inmediato si hay +3 pases/jugadores en la zona de pérdida.</li>
+                                <li><strong>Repliegue Táctico:</strong> Retorno coordinado si la zona tiene menos de 3 apoyos.</li>
+                                <li><strong>Temporización:</strong> Orientar el ataque rival hacia las bandas y colocarse por detrás de la línea de la pelota.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SUB-TAB 4: ABP -->
+                <div id="subtab-abp" class="subtab-content space-y-6">
+                    <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
+                        <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">Acciones a Balón Parado (A Favor y En Contra)</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
+                            <div>
+                                <span class="text-white font-bold block mb-1">Principios Clave:</span>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Principio de Superioridad Numérica Local.</li>
+                                    <li>Ocupación de Espacio y Marcaje Combinado.</li>
+                                    <li>Doble Intención (Transición Ofensiva-Defensiva simultánea).</li>
+                                    <li>Variabilidad Controlada en saques de esquina y faltas.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-bold block mb-1">Situaciones Cubiertas:</span>
+                                <p>Córners, Saques de Meta, Tiros Libres Directos/Indirectos, Saques de Banda y Saques de Centro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Resumen y Conclusiones del Modelo -->
+            <div class="bg-blue-950/30 border border-blue-800/50 rounded-2xl p-6 sm:p-8 space-y-4">
+                <h3 class="text-xl font-bold text-blue-400">Resumen del Modelo de Juego</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-300">
+                    <div class="flex gap-3">
+                        <span class="text-blue-500 font-bold">✓</span>
+                        <p><strong>Estabilidad:</strong> El modelo es más estable que la plantilla; define la identidad incluso cuando los jugadores cambian.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-blue-500 font-bold">✓</span>
+                        <p><strong>Estructura y Libertad:</strong> El sistema provee el marco táctico; el jugador decide con autonomía dentro de él.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-blue-500 font-bold">✓</span>
+                        <p><strong>Presión Estratégica:</strong> Presionar para dominar el tempo del juego, no solo para correr sin sentido.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-blue-500 font-bold">✓</span>
+                        <p><strong>Validación con Datos:</strong> La idea de juego se confirma y valida con indicadores de rendimiento objetivos (KPIs).</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- 2. SESIÓN -->
@@ -110,7 +379,7 @@
                 <span class="text-blue-500 text-2xl font-bold">02.</span>
                 <h2 class="text-3xl font-black text-white uppercase tracking-wide">Sesión de Entrenamiento</h2>
             </div>
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
                 <p class="text-gray-400 text-sm">Diseño de tareas y microciclos de trabajo estructurados según las exigencias tácticas y la gestión de cargas físicas.</p>
             </div>
         </section>
@@ -121,7 +390,7 @@
                 <span class="text-blue-500 text-2xl font-bold">03.</span>
                 <h2 class="text-3xl font-black text-white uppercase tracking-wide">Principio Metodológico</h2>
             </div>
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
                 <p class="text-gray-400 text-sm">Progresión pedagógica del entrenamiento: de lo analítico a lo global, garantizando la comprensión del jugador.</p>
             </div>
         </section>
@@ -132,24 +401,24 @@
                 <span class="text-blue-500 text-2xl font-bold">04.</span>
                 <h2 class="text-3xl font-black text-white uppercase tracking-wide">Análisis e Informes</h2>
             </div>
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
                 <p class="text-gray-400 text-sm">Informes tácticos pre y post partido con videoanálisis y métricas clave de rendimiento.</p>
             </div>
         </section>
 
     </main>
 
-    <!-- Script de Interactividad para Pestañas -->
+    <!-- Script de Interactividad para Sub-pestañas -->
     <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(btn => {
+        function switchSubTab(tabId) {
+            document.querySelectorAll('.subtab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.subtab-btn').forEach(btn => {
                 btn.classList.remove('bg-blue-600', 'text-white');
                 btn.classList.add('bg-gray-800', 'text-gray-400');
             });
 
-            document.getElementById('tab-' + tabId).classList.add('active');
-            const activeBtn = document.getElementById('btn-' + tabId);
+            document.getElementById('subtab-' + tabId).classList.add('active');
+            const activeBtn = document.getElementById('btn-sub-' + tabId);
             activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
             activeBtn.classList.add('bg-blue-600', 'text-white');
         }
