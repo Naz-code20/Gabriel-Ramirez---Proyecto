@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto CT Gabriel Ramírez - Modelo de Juego</title>
+    <title>Proyecto CT Gabriel Ramírez - Modelo y Sesión</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,6 +11,8 @@
         .tab-content.active { display: block; }
         .subtab-content { display: none; }
         .subtab-content.active { display: block; }
+        .sesion-tab-content { display: none; }
+        .sesion-tab-content.active { display: block; }
     </style>
 </head>
 <body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
@@ -20,8 +22,8 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <a href="#" class="text-xl font-black tracking-wider text-blue-500 uppercase">CT Gabriel Ramírez</a>
             <div class="flex flex-wrap gap-2 sm:gap-3 justify-center">
-                <a href="#modelo-juego" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition text-xs sm:text-sm">Modelo de Juego</a>
-                <a href="#sesion" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Sesión</a>
+                <a href="#modelo-juego" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Modelo de Juego</a>
+                <a href="#sesion" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition text-xs sm:text-sm">Sesión</a>
                 <a href="#principio-metodologico" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Principio Metodológico</a>
                 <a href="#analisis" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Análisis</a>
             </div>
@@ -50,10 +52,10 @@
                 </div>
             </div>
 
-            <!-- Foto de Portada -->
+            <!-- Foto de Portada (Corregida) -->
             <div class="lg:col-span-5 flex justify-center">
                 <div class="relative w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
-                    <img src="AOA_9648.jpg.JPG" alt="Gabriel Ramírez Trabajo Táctico" class="w-full h-full object-cover object-top">
+                    <img src="AOA_9648.jpg" alt="Gabriel Ramírez Trabajo Táctico" class="w-full h-full object-cover object-top">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-40"></div>
                 </div>
             </div>
@@ -64,10 +66,9 @@
     <!-- Contenido Principal -->
     <main class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
 
-        <!-- 1. MODELO DE JUEGO (COMPLETO DEL PDF) -->
+        <!-- 1. MODELO DE JUEGO -->
         <section id="modelo-juego" class="pt-16 space-y-12">
             
-            <!-- Título de Sección -->
             <div class="border-b border-gray-800 pb-6">
                 <div class="flex items-center gap-3 mb-2">
                     <span class="text-blue-500 text-2xl font-bold">01.</span>
@@ -134,7 +135,6 @@
                 <p class="text-gray-400 text-sm">Estructuración del terreno de juego en zonas longitudinales y canales horizontales para la orientación espacial de los jugadores.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-                    <!-- Zonas Longitudinales -->
                     <div class="space-y-3">
                         <h4 class="text-white font-bold text-sm uppercase tracking-wider text-blue-400">Zonas Longitudinales (Profundidad)</h4>
                         <div class="space-y-2 text-xs">
@@ -144,7 +144,7 @@
                             </div>
                             <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
                                 <span class="font-bold text-white">Zona B</span>
-                                <span class="text-gray-400">Construcción ygestión en campo propio</span>
+                                <span class="text-gray-400">Construcción y gestión en campo propio</span>
                             </div>
                             <div class="p-3 bg-gray-950 border border-gray-800 rounded-lg flex justify-between items-center">
                                 <span class="font-bold text-white">Zona C</span>
@@ -157,7 +157,6 @@
                         </div>
                     </div>
 
-                    <!-- Canales Horizontales -->
                     <div class="space-y-3">
                         <h4 class="text-white font-bold text-sm uppercase tracking-wider text-blue-400">Canales Horizontales (Amplitud)</h4>
                         <div class="space-y-2 text-xs">
@@ -193,7 +192,6 @@
                     <h3 class="text-2xl font-black text-white mt-3">Comportamientos Tácticos Detallados</h3>
                 </div>
 
-                <!-- Botones Sub-pestañas -->
                 <div class="flex flex-wrap gap-2 border-b border-gray-800 pb-4">
                     <button onclick="switchSubTab('ataque')" id="btn-sub-ataque" class="subtab-btn px-4 py-2 bg-blue-600 text-white font-bold rounded-lg text-xs sm:text-sm">1. Ataque Posicional</button>
                     <button onclick="switchSubTab('defensa')" id="btn-sub-defensa" class="subtab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg text-xs sm:text-sm">2. Presión Defensiva</button>
@@ -201,11 +199,8 @@
                     <button onclick="switchSubTab('abp')" id="btn-sub-abp" class="subtab-btn px-4 py-2 bg-gray-800 text-gray-400 font-bold rounded-lg text-xs sm:text-sm">4. Balón Parado (ABP)</button>
                 </div>
 
-                <!-- SUB-TAB 1: ATAQUE POSICIONAL -->
                 <div id="subtab-ataque" class="subtab-content active space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
-                        <!-- Posicionamiento y Posesión -->
                         <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                             <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">1. Posicionamiento y Amplitud</h4>
                             <p class="text-xs text-gray-400">Promover la posesión eficiente mediante una organización óptima del bloque en el campo.</p>
@@ -229,7 +224,6 @@
                             </ul>
                         </div>
 
-                        <!-- Progresión y Finalización -->
                         <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                             <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">3. Progresión Táctica</h4>
                             <p class="text-xs text-gray-400">Avanzar superando líneas enemigas para generar situaciones de gol.</p>
@@ -249,14 +243,11 @@
                                 <li>Remates cruzados al segundo palo e intercambios de apoyo/ruptura.</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- SUB-TAB 2: PRESIÓN DEFENSIVA -->
                 <div id="subtab-defensa" class="subtab-content space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
                         <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                             <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">1. Organización y Posicionamiento</h4>
                             <ul class="text-xs text-gray-300 space-y-2 list-disc pl-4">
@@ -290,15 +281,11 @@
                                 <li>Bloqueo activo de tiros lejanos y despejes orientados.</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- SUB-TAB 3: TRANSICIONES -->
                 <div id="subtab-transiciones" class="subtab-content space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
-                        <!-- Transición Ofensiva -->
                         <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                             <h4 class="text-green-400 font-bold text-base border-b border-gray-800 pb-2">Transición Defensa-Ataque (Al recuperar)</h4>
                             <p class="text-xs text-gray-400">Aprovechar el desorden rival tras la recuperación del balón.</p>
@@ -310,7 +297,6 @@
                             </ul>
                         </div>
 
-                        <!-- Transición Defensiva -->
                         <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                             <h4 class="text-red-400 font-bold text-base border-b border-gray-800 pb-2">Transición Ataque-Defensa (Al perder)</h4>
                             <p class="text-xs text-gray-400">Evitar que el rival progrese o nos tome desorganizados.</p>
@@ -320,11 +306,9 @@
                                 <li><strong>Temporización:</strong> Orientar el ataque rival hacia las bandas y colocarse por detrás de la línea de la pelota.</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- SUB-TAB 4: ABP -->
                 <div id="subtab-abp" class="subtab-content space-y-6">
                     <div class="bg-gray-950 p-5 rounded-xl border border-gray-800 space-y-4">
                         <h4 class="text-blue-400 font-bold text-base border-b border-gray-800 pb-2">Acciones a Balón Parado (A Favor y En Contra)</h4>
@@ -345,7 +329,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Resumen y Conclusiones del Modelo -->
@@ -373,14 +356,79 @@
 
         </section>
 
-        <!-- 2. SESIÓN -->
-        <section id="sesion" class="pt-16">
-            <div class="flex items-center gap-3 mb-8">
-                <span class="text-blue-500 text-2xl font-bold">02.</span>
-                <h2 class="text-3xl font-black text-white uppercase tracking-wide">Sesión de Entrenamiento</h2>
+        <!-- 2. SESIÓN DE ENTRENAMIENTO -->
+        <section id="sesion" class="pt-16 space-y-8">
+            <div class="border-b border-gray-800 pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-blue-500 text-2xl font-bold">02.</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-wide">Sesión de Entrenamiento</h2>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">Diseño metodológico, estructuración de tareas y desarrollo práctico de sesiones.</p>
             </div>
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8">
-                <p class="text-gray-400 text-sm">Diseño de tareas y microciclos de trabajo estructurados según las exigencias tácticas y la gestión de cargas físicas.</p>
+
+            <!-- Portada de la Sección (TAREA 1) -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                <h3 class="text-xl font-bold text-blue-400 uppercase tracking-wider">Marco de Trabajo en Cancha</h3>
+                <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-950">
+                    <img src="TAREA 1.jpg" alt="Sesión - Tarea 1 Portada" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Botones Interactivos de Tareas -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-8">
+                <div class="flex flex-wrap gap-3 border-b border-gray-800 pb-6">
+                    <button onclick="switchSesionTab('estructura')" id="btn-sesion-estructura" class="sesion-tab-btn px-5 py-3 bg-blue-600 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition">
+                        ESTRUCTURA GENERAL DEL PROCESO
+                    </button>
+                    <button onclick="switchSesionTab('complemento')" id="btn-sesion-complemento" class="sesion-tab-btn px-5 py-3 bg-gray-800 text-gray-400 font-bold rounded-xl text-xs sm:text-sm hover:bg-gray-700 transition">
+                        CÓMO SE COMPLEMENTAN LAS FASES
+                    </button>
+                    <button onclick="switchSesionTab('fases')" id="btn-sesion-fases" class="sesion-tab-btn px-5 py-3 bg-gray-800 text-gray-400 font-bold rounded-xl text-xs sm:text-sm hover:bg-gray-700 transition">
+                        FASES
+                    </button>
+                </div>
+
+                <!-- TAB 1: ESTRUCTURA GENERAL DEL PROCESO (TAREA 2) -->
+                <div id="sesion-tab-estructura" class="sesion-tab-content active space-y-4">
+                    <h4 class="text-lg font-bold text-white">Estructura General del Proceso</h4>
+                    <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950">
+                        <img src="TAREA 2.jpg" alt="Estructura General del Proceso - Tarea 2" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- TAB 2: CÓMO SE COMPLEMENTAN LAS FASES (TAREA 3) -->
+                <div id="sesion-tab-complemento" class="sesion-tab-content space-y-4">
+                    <h4 class="text-lg font-bold text-white">Cómo se Complementan las Fases</h4>
+                    <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950">
+                        <img src="TAREA 3.jpg" alt="Cómo se Complementan las Fases - Tarea 3" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- TAB 3: FASES (TAREA 4, TAREA 5, TAREA 6) -->
+                <div id="sesion-tab-fases" class="sesion-tab-content space-y-8">
+                    <h4 class="text-lg font-bold text-white">Desglose Metodológico de Fases</h4>
+                    <div class="grid grid-cols-1 gap-8">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Fase 1</span>
+                            <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950">
+                                <img src="TAREA 4.jpg" alt="Fases - Tarea 4" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Fase 2</span>
+                            <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950">
+                                <img src="TAREA 5.jpg" alt="Fases - Tarea 5" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/40">Fase 3</span>
+                            <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950">
+                                <img src="TAREA 6.jpg" alt="Fases - Tarea 6" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -408,8 +456,9 @@
 
     </main>
 
-    <!-- Script de Interactividad para Sub-pestañas -->
+    <!-- Scripts de Interactividad -->
     <script>
+        // Pestañas de Modelo de Juego
         function switchSubTab(tabId) {
             document.querySelectorAll('.subtab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.subtab-btn').forEach(btn => {
@@ -419,6 +468,20 @@
 
             document.getElementById('subtab-' + tabId).classList.add('active');
             const activeBtn = document.getElementById('btn-sub-' + tabId);
+            activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
+            activeBtn.classList.add('bg-blue-600', 'text-white');
+        }
+
+        // Pestañas de la Sección Sesión
+        function switchSesionTab(tabId) {
+            document.querySelectorAll('.sesion-tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.sesion-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-gray-800', 'text-gray-400');
+            });
+
+            document.getElementById('sesion-tab-' + tabId).classList.add('active');
+            const activeBtn = document.getElementById('btn-sesion-' + tabId);
             activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
             activeBtn.classList.add('bg-blue-600', 'text-white');
         }
