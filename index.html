@@ -33,11 +33,11 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <a href="#" class="text-xl font-black tracking-wider text-blue-500 uppercase">CT Gabriel Ramírez</a>
             <div class="flex flex-wrap gap-2 sm:gap-3 justify-center">
-                <a href="#cuerpo-tecnico" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Cuerpo Técnico</a>
                 <a href="#modelo-juego" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Modelo de Juego</a>
                 <a href="#sesion" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition text-xs sm:text-sm">Sesión</a>
                 <a href="#principio-metodologico" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Principio Metodológico</a>
                 <a href="#analisis" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Análisis</a>
+                <a href="#cuerpo-tecnico" class="px-4 py-2 bg-gray-800 hover:bg-blue-600 text-white font-medium rounded-lg transition text-xs sm:text-sm">Cuerpo Técnico</a>
             </div>
         </div>
     </nav>
@@ -77,34 +77,6 @@
 
     <!-- Contenido Principal -->
     <main class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
-
-        <!-- 0. CUERPO TÉCNICO (NUEVA SECCIÓN) -->
-        <section id="cuerpo-tecnico" class="pt-16 space-y-8">
-            <div class="border-b border-gray-800 pb-6">
-                <div class="flex items-center gap-3 mb-2">
-                    <span class="text-blue-500 text-2xl font-bold">00.</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-wide">Cuerpo Técnico</h2>
-                </div>
-                <p class="text-gray-400 text-sm sm:text-base">Estructura profesional y perfiles del equipo de trabajo.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Gabriel Ramírez</h3>
-                    <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Director Técnico / Entrenador Principal</p>
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Liderazgo del proyecto deportivo, planificación táctica general, desarrollo del modelo de juego e intervención directa en campo.
-                    </p>
-                </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400">Área de Análisis y Preparación</h3>
-                    <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Soporte Metodológico y Videoanálisis</p>
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Evaluación del rendimiento propio y rival, diseño de microciclos estructurados y monitoreo de métricas tácticas.
-                    </p>
-                </div>
-            </div>
-        </section>
 
         <!-- 1. MODELO DE JUEGO -->
         <section id="modelo-juego" class="pt-16 space-y-12">
@@ -376,7 +348,6 @@
                 <h3 class="text-xl font-bold text-blue-400">Video Explicativo: Aplicación del Modelo de Juego</h3>
                 <p class="text-xs sm:text-sm text-gray-300">Análisis audiovisual de los principios del modelo sobre el terreno de juego:</p>
                 
-                <!-- Video de Google Drive para Modelo de Juego -->
                 <div class="w-full aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-950">
                     <iframe src="https://drive.google.com/file/d/1R-mlIi4KWUPiqyxpzPUjTK_ZmuMXZGFo/preview" class="w-full h-full" allow="autoplay" allowfullscreen></iframe>
                 </div>
@@ -394,12 +365,11 @@
                 <p class="text-gray-400 text-sm sm:text-base">Diseño metodológico, estructuración de tareas y desarrollo práctico de sesiones.</p>
             </div>
 
-            <!-- Botones e Imágenes en el orden solicitado -->
             <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-8 hover-glow">
                 
-                <!-- Botones Principales en la Parte Superior (Antes de TAREA 1) -->
+                <!-- Botones Principales en la Parte Superior -->
                 <div class="flex flex-wrap gap-3 border-b border-gray-800 pb-6">
-                    <button onclick="switchSesionTab('estructura')" id="btn-sesion-estructura" class="sesion-tab-btn px-5 py-3 bg-blue-600 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition hover-glow">
+                    <button onclick="switchSesionTab('estructura')" id="btn-sesion-estructura" class="sesion-tab-btn px-5 py-3 bg-gray-800 text-gray-400 font-bold rounded-xl text-xs sm:text-sm hover:bg-gray-700 transition hover-glow">
                         ESTRUCTURA GENERAL DEL PROCESO
                     </button>
                     <button onclick="switchSesionTab('complemento')" id="btn-sesion-complemento" class="sesion-tab-btn px-5 py-3 bg-gray-800 text-gray-400 font-bold rounded-xl text-xs sm:text-sm hover:bg-gray-700 transition hover-glow">
@@ -410,16 +380,8 @@
                     </button>
                 </div>
 
-                <!-- Portada / TAREA 1 -->
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-blue-400 uppercase tracking-wider">Marco de Trabajo en Cancha</h3>
-                    <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-950 hover-glow">
-                        <img src="TAREA 1.jpg" alt="Sesión - Tarea 1 Portada" class="w-full h-auto object-cover">
-                    </div>
-                </div>
-
                 <!-- TAB 1: ESTRUCTURA GENERAL DEL PROCESO (TAREA 2) -->
-                <div id="sesion-tab-estructura" class="sesion-tab-content active space-y-4 pt-4 border-t border-gray-800">
+                <div id="sesion-tab-estructura" class="sesion-tab-content space-y-4">
                     <h4 class="text-lg font-bold text-white">Estructura General del Proceso</h4>
                     <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950 hover-glow">
                         <img src="TAREA 2.jpg" alt="Estructura General del Proceso - Tarea 2" class="w-full h-auto object-cover">
@@ -427,7 +389,7 @@
                 </div>
 
                 <!-- TAB 2: CÓMO SE COMPLEMENTAN LAS FASES (TAREA 3) -->
-                <div id="sesion-tab-complemento" class="sesion-tab-content space-y-4 pt-4 border-t border-gray-800">
+                <div id="sesion-tab-complemento" class="sesion-tab-content space-y-4">
                     <h4 class="text-lg font-bold text-white">Cómo se Complementan las Fases</h4>
                     <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-xl bg-gray-950 hover-glow">
                         <img src="TAREA 3.jpg" alt="Cómo se Complementan las Fases - Tarea 3" class="w-full h-auto object-cover">
@@ -435,7 +397,7 @@
                 </div>
 
                 <!-- TAB 3: FASES (TAREA 4, TAREA 5, TAREA 6) -->
-                <div id="sesion-tab-fases" class="sesion-tab-content space-y-8 pt-4 border-t border-gray-800">
+                <div id="sesion-tab-fases" class="sesion-tab-content space-y-8">
                     <h4 class="text-lg font-bold text-white">Desglose Metodológico de Fases</h4>
                     <div class="grid grid-cols-1 gap-8">
                         <div class="space-y-3">
@@ -459,6 +421,14 @@
                     </div>
                 </div>
 
+                <!-- Portada Inicial TAREA 1 (se oculta al presionar un botón) -->
+                <div id="tarea1-container" class="space-y-4">
+                    <h3 class="text-xl font-bold text-blue-400 uppercase tracking-wider">Marco de Trabajo en Cancha</h3>
+                    <div class="w-full rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-950 hover-glow">
+                        <img src="TAREA 1.jpg" alt="Sesión - Tarea 1 Portada" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -471,7 +441,6 @@
             <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6 hover-glow">
                 <p class="text-gray-400 text-sm">Progresión pedagógica del entrenamiento: de lo analítico a lo global, garantizando la comprensión del jugador.</p>
                 
-                <!-- Video de Google Drive para Principio Metodológico -->
                 <div class="w-full aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-950">
                     <iframe src="https://drive.google.com/file/d/1kewX4Dw6rETGcQP4zpknYBjKH9RkG7J6/preview" class="w-full h-full" allow="autoplay" allowfullscreen></iframe>
                 </div>
@@ -479,13 +448,121 @@
         </section>
 
         <!-- 4. ANÁLISIS -->
-        <section id="analisis" class="pt-16">
-            <div class="flex items-center gap-3 mb-8">
-                <span class="text-blue-500 text-2xl font-bold">04.</span>
-                <h2 class="text-3xl font-black text-white uppercase tracking-wide">Análisis e Informes</h2>
+        <section id="analisis" class="pt-16 space-y-8">
+            <div class="border-b border-gray-800 pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-blue-500 text-2xl font-bold">04.</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-wide">Área Video Análisis</h2>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">Estructura metodológica para la evaluación de fortalezas y debilidades propias y del rival.</p>
             </div>
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 hover-glow">
-                <p class="text-gray-400 text-sm">Informes tácticos pre y post partido con videoanálisis y métricas clave de rendimiento.</p>
+
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-8 hover-glow">
+                <div class="border-l-4 border-emerald-500 pl-4 py-1">
+                    <h3 class="text-xl sm:text-2xl font-black text-white uppercase tracking-wider">Fortalezas y Debilidades Propias y del Rival</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- BLOQUE 1: ¿QUÉ? -->
+                    <div class="bg-gray-950 p-6 rounded-xl border border-emerald-900/50 hover-glow space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 font-bold flex items-center justify-center border border-emerald-500/40 text-xs">¿QUÉ?</span>
+                            <h4 class="text-lg font-bold text-emerald-400">Acción Táctica</h4>
+                        </div>
+                        <ul class="text-xs text-gray-300 space-y-2 list-disc pl-5">
+                            <li>Pérdidas de balón</li>
+                            <li>Recuperación de balón</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOQUE 2: ¿CUÁNDO? -->
+                    <div class="bg-gray-950 p-6 rounded-xl border border-emerald-900/50 hover-glow space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 font-bold flex items-center justify-center border border-emerald-500/40 text-xs">¿CUÁNDO?</span>
+                            <h4 class="text-lg font-bold text-emerald-400">Momento del Juego</h4>
+                        </div>
+                        <ul class="text-xs text-gray-300 space-y-2 list-disc pl-5">
+                            <li>Posesión</li>
+                            <li>No Posesión</li>
+                            <li>Recuperando el balón</li>
+                            <li>Perdiendo el balón</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOQUE 3: ¿DÓNDE? -->
+                    <div class="bg-gray-950 p-6 rounded-xl border border-emerald-900/50 hover-glow space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 font-bold flex items-center justify-center border border-emerald-500/40 text-xs">¿DÓNDE?</span>
+                            <h4 class="text-lg font-bold text-emerald-400">Zona del Campo de Juego</h4>
+                        </div>
+                        <ul class="text-xs text-gray-300 space-y-2 list-disc pl-5">
+                            <li>Zona "A"</li>
+                            <li>Zona "B"</li>
+                            <li>Zona "C"</li>
+                            <li>Zona "D"</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOQUE 4: ¿QUIÉN? -->
+                    <div class="bg-gray-950 p-6 rounded-xl border border-emerald-900/50 hover-glow space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 font-bold flex items-center justify-center border border-emerald-500/40 text-xs">¿QUIÉN?</span>
+                            <h4 class="text-lg font-bold text-emerald-400">Jugadores que Intervienen</h4>
+                        </div>
+                        <ul class="text-xs text-gray-300 space-y-2 list-disc pl-5">
+                            <li>El que da el pase</li>
+                            <li>El que la pierde</li>
+                            <li>Posibles receptores</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="text-center pt-2">
+                    <p class="text-xs font-semibold text-emerald-500 tracking-widest uppercase">Construyendo el gol del futuro</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CUERPO TÉCNICO (SECCIÓN FINAL) -->
+        <section id="cuerpo-tecnico" class="pt-16 space-y-8">
+            <div class="border-b border-gray-800 pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-blue-500 text-2xl font-bold">05.</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-wide">Cuerpo Técnico</h2>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">Estructura profesional y perfiles del equipo de trabajo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Gabriel Ramírez -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-500 flex items-center justify-center text-blue-400 font-black text-lg">GR</div>
+                    <h3 class="text-lg font-bold text-white">Gabriel Ramírez</h3>
+                    <p class="text-xs text-blue-400 uppercase tracking-widest font-bold">Entrenador Principal</p>
+                </div>
+
+                <!-- Jorge Perrota -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-500 flex items-center justify-center text-blue-400 font-black text-lg">JP</div>
+                    <h3 class="text-lg font-bold text-white">Jorge Perrota</h3>
+                    <p class="text-xs text-blue-400 uppercase tracking-widest font-bold">Asistente Técnico</p>
+                </div>
+
+                <!-- Maximiliano Alonso -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-500 flex items-center justify-center text-blue-400 font-black text-lg">MA</div>
+                    <h3 class="text-lg font-bold text-white">Maximiliano Alonso</h3>
+                    <p class="text-xs text-blue-400 uppercase tracking-widest font-bold">Preparador Físico</p>
+                </div>
+
+                <!-- Nazir Zelada -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover-glow space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-500 flex items-center justify-center text-blue-400 font-black text-lg">NZ</div>
+                    <h3 class="text-lg font-bold text-white">Nazir Zelada</h3>
+                    <p class="text-xs text-blue-400 uppercase tracking-widest font-bold">Analista</p>
+                </div>
             </div>
         </section>
 
@@ -509,6 +586,12 @@
 
         // Pestañas de la Sección Sesión
         function switchSesionTab(tabId) {
+            // Ocultar portada TAREA 1
+            const tarea1 = document.getElementById('tarea1-container');
+            if (tarea1) {
+                tarea1.style.display = 'none';
+            }
+
             document.querySelectorAll('.sesion-tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.sesion-tab-btn').forEach(btn => {
                 btn.classList.remove('bg-blue-600', 'text-white');
